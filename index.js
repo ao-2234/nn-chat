@@ -19,7 +19,7 @@ const server = http.createServer(basic.check((req,res)=>{
   console.error('Client Error',e);
 })
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 server.listen(port,()=>{
   console.info(`サーバがポート${port}番で起動中`);
 })
